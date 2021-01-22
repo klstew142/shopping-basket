@@ -24,5 +24,17 @@ describe("Shopping", function() {
     it("should give price of £2 for 6 tins of beans", function() {
       expect(shopping.cost("beans", 6)).toEqual(200);
     });
-  });
-  
+
+    it("should give price of £300 for 300 tins of beans", function() {
+      expect(shopping.cost("beans", 300)).toEqual(10000);
+    });
+
+    it("should give price of £2.80 for 8 tins of beans", function() {
+      expect(shopping.cost("beans", 8)).toEqual(280);
+    });
+
+    it("should give price for 1kg of potatoes", function() {
+      expect(shopping.cost("potatoes", 1)).toEqual(199)
+    });
+    
+});
