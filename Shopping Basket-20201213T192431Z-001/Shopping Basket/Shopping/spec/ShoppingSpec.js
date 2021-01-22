@@ -33,8 +33,15 @@ describe("Shopping", function() {
       expect(shopping.cost("beans", 8)).toEqual(280);
     });
 
-    it("should give price for 1kg of potatoes", function() {
-      expect(shopping.cost("potatoes", 1)).toEqual(199)
+    it("should give price for 1lb of potatoes", function() {
+      expect(shopping.cost("potatoes", 16)).toEqual(199)
     });
     
+    it("should give price for 4oz of potatoes", function() {
+      expect(shopping.cost("potatoes", 4)).toEqual(50)
+    });
+
+    it("should give price for 17oz of potatoes", function() {
+      expect(shopping.cost("potatoes", 17)).toEqual(211)
+    });
 });
