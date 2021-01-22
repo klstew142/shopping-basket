@@ -22,3 +22,11 @@ Shopping.prototype.cost = function(item, quantity) {
   };   
   return Math.round(totalCost);    
 };
+
+Shopping.prototype.costBasket = function(items){
+  let totalBasketCost = 0;
+  //Loop through each item in items array.
+  //For each item call cost, passing in the values from that item.
+  //Return the total of the cost of each item.
+  return totalBasketCost;
+};

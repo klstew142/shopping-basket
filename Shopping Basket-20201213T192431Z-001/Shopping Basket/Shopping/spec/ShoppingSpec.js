@@ -34,14 +34,20 @@ describe("Shopping", function() {
     });
 
     it("should give price for 1lb of potatoes", function() {
-      expect(shopping.cost("potatoes", 16)).toEqual(199)
+      expect(shopping.cost("potatoes", 16)).toEqual(199);
     });
     
     it("should give price for 4oz of potatoes", function() {
-      expect(shopping.cost("potatoes", 4)).toEqual(50)
+      expect(shopping.cost("potatoes", 4)).toEqual(50);
     });
 
     it("should give price for 17oz of potatoes", function() {
-      expect(shopping.cost("potatoes", 17)).toEqual(211)
+      expect(shopping.cost("potatoes", 17)).toEqual(211);
+    });
+
+    it("should price a basket with beans and potatoes in", function(){
+      const items = [["potatoes", 4], ["beans", 8]];
+      const cost = shopping.costBasket(items);
+      expect(cost).toEqual(330);
     });
 });
