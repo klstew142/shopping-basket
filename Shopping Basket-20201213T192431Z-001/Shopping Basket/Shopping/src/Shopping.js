@@ -25,8 +25,12 @@ Shopping.prototype.cost = function(item, quantity) {
 
 Shopping.prototype.costBasket = function(items){
   let totalBasketCost = 0;
-  //Loop through each item in items array.
-  //For each item call cost, passing in the values from that item.
-  //Return the total of the cost of each item.
+  for (var i=0; i < items.length; i++) {
+    totalBasketCost += this.cost(items[i][0], items[i][1]);
+   };
   return totalBasketCost;
 };
+
+//Loop through each item in items array.
+//For each item call cost, passing in the values from that item.
+//Return the total of the cost of each item.
