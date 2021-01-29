@@ -5,10 +5,10 @@ Shopping.prototype.cost = function(item, quantity) {
   const costOfPotatoesPerPound= 199;
   let totalCost = 0;
   switch(item){
-    case "beans":
-      let modulusOfThree = quantity % 3;
+    case "beans": //offer for beans is 3 for £1
+      let modulusOfThree = quantity % 3; 
       if (modulusOfThree == 0 || quantity > 3){
-        totalCost = 100 * Math.floor(quantity / 3);
+        totalCost = 100 * Math.floor(quantity / 3); //If beans is multiple of 3, gives us the offer price 
       };
 
       totalCost = totalCost + (costOfBeans * modulusOfThree);
