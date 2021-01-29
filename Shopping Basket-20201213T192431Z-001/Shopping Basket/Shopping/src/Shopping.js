@@ -30,7 +30,6 @@ Shopping.prototype.costBasket = function(items){
    };
   return totalBasketCost;
 };
-
 //Loop through each item in items array.
 //For each item call cost, passing in the values from that item.
 //Return the total of the cost of each item.
